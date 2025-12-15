@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Igor Rodrigues - Desenvolvedor / Analista de Dados</title>
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="theme-color" content="#007bff">
+<meta name="robots" content="index, follow">
+<title>Igor Rodrigues - Centralização de Porfólio</title>
+<meta name="description" content="Desenvolvedor Python especializado em automação, sistemas para MEI, análise de dados e integração de APIs. Criador dos projetos SmartBiz, Alerta.Aí e PDX.">
+<meta name="author" content="Igor Rodrigues">
+<meta name="keywords" content="desenvolvedor python, automação whatsapp, sistemas MEI, análise dados, gestão financeira, simulador alagamentos, integração APIs">
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Igor Rodrigues - Desenvolvedor Python &amp; Analista de Dados">
+<meta property="og:description" content="Especialista em automação, sistemas para MEI e análise de dados. Criador dos projetos SmartBiz e Alerta.Aí">
+<meta property="og:image" content="img/portfolio/igor-profile.jpg">
+<meta property="og:url" content="https://igorrodrigz.github.io">
+<meta property="og:type" content="website">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Igor Rodrigues - Desenvolvedor Python">
+<meta name="twitter:description" content="Automação, sistemas MEI e análise de dados">
 
 <!-- Favicons
     ================================================== -->
@@ -15,12 +28,113 @@
 <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
 <!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
 
 <!-- Stylesheet
     ================================================== -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
+<style>
+/* Tech Stack Styling */
+.tech-stack {
+  margin-top: 10px;
+}
+.tech-stack .tech {
+  background: rgba(255,255,255,0.9);
+  color: #333;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  display: inline-block;
+}
+.about-content h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.highlight-projects {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.highlight-projects h4 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+.highlight-projects ul {
+  margin-bottom: 0;
+}
+.highlight-projects li {
+  margin-bottom: 8px;
+}
+.tech-expertise {
+  margin: 20px 0;
+}
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.tech-item {
+  background: #007bff;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.contact-highlights {
+  margin: 20px 0;
+}
+.highlight-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px 0;
+}
+.highlight-item i {
+  color: #007bff;
+  margin-right: 10px;
+  width: 20px;
+}
+.contact-methods {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.contact-methods p {
+  margin-bottom: 8px;
+}
+.contact-methods a {
+  color: #007bff;
+  text-decoration: none;
+}
+.contact-methods a:hover {
+  text-decoration: underline;
+}
+.portfolio-item .overlay-content p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+.intro-text .subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+select.form-control {
+  height: 45px;
+}
+.btn-custom i {
+  margin-right: 8px;
+}
+</style>
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -43,8 +157,14 @@
           <div class="col-xs-12 col-md-8">
             <div class="intro-text">
               <h1>Igor Rodrigues</h1>
-              <p>Desenvolvedor / Analista de Dados</p>
-              <a href="#portfolio" class="btn btn-custom btn-lg page-scroll">Portfólio</a> <a href="#contact" class="btn btn-custom btn-lg page-scroll">Sobre mim</a> </div>
+              <p>Desenvolvedor Backend Python | Analista de Dados | BI</p>
+              <p class="subtitle">
+              Desenvolvimento de sistemas orientados a dados, automação inteligente e IA aplicada
+              </p>
+              <a href="#portfolio" class="btn btn-custom btn-lg">Projetos</a>
+              <a href="#contact" class="btn btn-custom btn-lg">Contato</a>
+
+            </div>
           </div>
         </div>
       </div>
@@ -52,228 +172,488 @@
   </div>
 </header>
 <!-- Portfolio Section -->
-<div id="portfolio">
+<main id="portfolio">
   <div class="container">
-    <div class="section-title">
-      <h2>Portfólio</h2>
+    <section class="section-title">
+      <h2>⭐ Projetos em Destaque</h2>
+      <p class="section-description">Principais soluções desenvolvidas</p>
+    </section>
+
+    <!-- Featured Projects -->
+    <div class="featured-projects-section">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 featured-project">
+          <div class="portfolio-item featured">
+            <div class="hover-bg">
+              <a href="img/portfolio/Alegrete9m.png" title="Alerta.Aí - Sistema de Monitoramento e Alertas" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h4>🌊 Alerta.Aí</h4>
+                      <p><strong>Monitoramento Inteligente de Alagamentos</strong></p>
+                      <p>Sistema de simulação de alagamentos urbanos com automação de alertas via WhatsApp e análise de dados meteorológicos em tempo real.</p>
+                      <div class="tech-stack">
+                        <span class="tech">Python</span>
+                        <span class="tech">WhatsApp API</span>
+                        <span class="tech">Dados Meteorológicos</span>
+                        <span class="tech">Automação</span>
+                        <span class="tech">Web</span>
+                      </div>
+                      <div class="project-links">
+                        <a href="https://github.com/igorrodrigz/Ferramentas-alerta" target="_blank" class="btn-github-small">
+                          <i class="fa fa-github"></i> GitHub
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img src="img/portfolio/Alegrete9m small.png" class="img-responsive" alt="Alerta.Aí" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 featured-project">
+          <div class="portfolio-item featured">
+            <div class="hover-bg">
+              <a href="img/portfolio/mcp-guia.png" title="MCP-GuiaTurista - Chat com Banco de Dados" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h4>💬 MCP-GuiaTurista</h4>
+                      <p><strong>Chat Inteligente com Banco de Dados</strong></p>
+                      <p>Sistema inovador de interação com banco de dados relacional via linguagem natural. Converte perguntas em queries SQL automaticamente.</p>
+                      <div class="tech-stack">
+                        <span class="tech">Python</span>
+                        <span class="tech">NLP</span>
+                        <span class="tech">LLM</span>
+                        <span class="tech">SQL</span>
+                        <span class="tech">MCP</span>
+                      </div>
+                      <div class="project-links">
+                        <a href="https://github.com/igorrodrigz/MCP-GuiaTurista" target="_blank" class="btn-github-small">
+                          <i class="fa fa-github"></i> GitHub
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img src="img/portfolio/mcp-guia small.png" class="img-responsive" alt="MCP-GuiaTurista" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 featured-project">
+          <div class="portfolio-item featured">
+            <div class="hover-bg">
+              <a href="img/portfolio/idoso-seguro.png" title="Idoso Seguro - App de Proteção" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h4>👴 Idoso Seguro</h4>
+                      <p><strong>Aplicativo de Proteção e Monitoramento</strong></p>
+                      <p>App mobile com localização GPS, alertas de saúde, contatos de emergência e integração com familiares para proteção de idosos.</p>
+                      <div class="tech-stack">
+                        <span class="tech">Python/Kotlin</span>
+                        <span class="tech">GPS/Localização</span>
+                        <span class="tech">Saúde</span>
+                        <span class="tech">Mobile</span>
+                        <span class="tech">IoT</span>
+                      </div>
+                      <div class="project-links">
+                        <a href="https://github.com/igorrodrigz" target="_blank" class="btn-github-small">
+                          <i class="fa fa-github"></i> GitHub
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img src="img/portfolio/idoso-seguro small.png" class="img-responsive" alt="Idoso Seguro" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 featured-project">
+          <div class="portfolio-item featured">
+            <div class="hover-bg">
+              <a href="img/portfolio/lorien.png" title="Lorien - Django Multi-tenant" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h4>🏪 Lorien</h4>
+                      <p><strong>Sistema Multi-tenant Django</strong></p>
+                      <p>Plataforma web escalável para gestão de oficinas e ateliers com arquitetura multi-tenant, suportando múltiplas empresas com isolamento de dados.</p>
+                      <div class="tech-stack">
+                        <span class="tech">Python</span>
+                        <span class="tech">Django</span>
+                        <span class="tech">PostgreSQL</span>
+                        <span class="tech">Multi-tenant</span>
+                        <span class="tech">Rest API</span>
+                      </div>
+                      <div class="project-links">
+                        <a href="https://github.com/igorrodrigz/lorien" target="_blank" class="btn-github-small">
+                          <i class="fa fa-github"></i> GitHub
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img src="img/portfolio/lorien small.png" class="img-responsive" alt="Lorien" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 featured-project">
+          <div class="portfolio-item featured">
+            <div class="hover-bg">
+              <a href="img/portfolio/geocode.png" title="GeoCode - Enriquecimento de Dados Geográficos" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h4>🗺️ GeoCode</h4>
+                      <p><strong>Localizador de Coordenadas Geográficas</strong></p>
+                      <p>Ferramenta de enriquecimento de dados que processa arquivos CSV com endereços/CEPs e retorna coordenadas precisas via APIs de geolocalização.</p>
+                      <div class="tech-stack">
+                        <span class="tech">Python</span>
+                        <span class="tech">Geolocalização</span>
+                        <span class="tech">CSV/Dados</span>
+                        <span class="tech">APIs Google</span>
+                        <span class="tech">Pandas</span>
+                      </div>
+                      <div class="project-links">
+                        <a href="https://github.com/igorrodrigz/GeoCode" target="_blank" class="btn-github-small">
+                          <i class="fa fa-github"></i> GitHub
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img src="img/portfolio/geocode small.png" class="img-responsive" alt="GeoCode" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="categories">
-      <ul class="cat">
-        <li>
-          <ol class="type">
-            <li><a href="#" data-filter="*" class="active">Todos</a></li>
-            <li><a href="#" data-filter=".lorem">Desenvolvimento</a></li>
-            <li><a href="#" data-filter=".dolor">Análises</a></li>
-            <li><a href="#" data-filter=".adipiscing">Projetos</a></li>
-          </ol>
-        </li>
-      </ul>
+
+    <!-- Other Projects Section -->
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #e9ecef;">
+      <section class="section-title">
+        <h2>🧪 Outros Projetos</h2>
+        <p class="section-description">Projetos acadêmicos, prototipações e estudos</p>
+      </section>
+      
+      <div class="categories">
+        <ul class="cat">
+          <li>
+            <ol class="type">
+              <li><a href="#" data-filter="*" class="active">Todos</a></li>
+              <li><a href="#" data-filter=".lorem">Desenvolvimento</a></li>
+              <li><a href="#" data-filter=".dolor">Análises</a></li>
+              <li><a href="#" data-filter=".adipiscing">Jogos e Prototipações</a></li>
+            </ol>
+          </li>
+        </ul>
+      </div>
     </div>
+
     <div class="row">
       <div class="portfolio-items">
         <div class="col-sm-6 col-md-4 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/Pandora-SmartBiz.png" title="Gestão para Microempresas" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>SmartBiz - Gestão para Micro Empreendedores Individuais</h4>
+          <div class="portfolio-item small-project">
+            <div class="hover-bg"> 
+              <a href="img/portfolio/Pandora-SmartBiz.png" title="SmartBiz - Sistema de Gestão para MEI" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h5>SmartBiz</h5>
+                      <p style="font-size: 12px;">Sistema de gestão MEI com Tkinter</p>
+                      <div class="tech-stack" style="font-size: 9px;">
+                        <span class="tech">Python</span>
+                        <span class="tech">Tkinter</span>
+                        <span class="tech">SQLite</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="img/portfolio/Pandora-SmartBiz small.png" class="img-responsive" alt="Projeto de Gestão para Microempreendedores individuais"> </a> </div>
+                <img src="img/portfolio/Pandora-SmartBiz small.png" class="img-responsive" alt="SmartBiz" loading="lazy">
+              </a>
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/Alegrete9m.png" title="Simulador de Alagamentos" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>Alerta.Aí - Simulador de Alagamentos em Área Urbana</h4>
+          <div class="portfolio-item small-project">
+            <div class="hover-bg">
+              <a href="img/portfolio/pdx.png" title="PDX - Controle de Vendas" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h5>PDX</h5>
+                      <p style="font-size: 12px;">Sistema de vendas com relatórios</p>
+                      <div class="tech-stack" style="font-size: 9px;">
+                        <span class="tech">Python</span>
+                        <span class="tech">Database</span>
+                        <span class="tech">Relatórios</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="img/portfolio/Alegrete9m small.png" class="img-responsive" alt="MR Solutions Simulador de Alagamentos"> </a> </div>
+                <img src="img/portfolio/pdx small.png" class="img-responsive" alt="PDX" loading="lazy">
+              </a>
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 adipiscing">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/pdx.png" title="PDX - Controle de Vendas para Micro Empreendedores Individuais" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>PDX - Controle de Vendas para Micro Empreendedores Individuais</h4>
+          <div class="portfolio-item small-project">
+            <div class="hover-bg"> 
+              <a href="img/portfolio/jogo-cobra.png" title="Jogo da Cobra em Python" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h5>🐍 Jogo da Cobra</h5>
+                      <p style="font-size: 12px;">Clássico jogo em Python/Pygame</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="img/portfolio/pdx small.png" class="img-responsive" alt="PDX - Controle de Vendas para Micro Empreendedores Individuais"> </a> </div>
+                <img src="img/portfolio/jogo-cobra small.png" class="img-responsive" alt="Jogo da Cobra"> </a> 
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 adipiscing">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/jogo-cobra.png" title="Jogo Clássico da Cobra em Python" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>Jogo Clássico da Cobra</h4>
+          <div class="portfolio-item small-project">
+            <div class="hover-bg"> 
+              <a href="img/portfolio/snk-gestao.png" title="SNK - Gestão Financeira" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h5>SNK - Gestão</h5>
+                      <p style="font-size: 12px;">Gestão financeira com Tkinter</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="img/portfolio/jogo-cobra small.png" class="img-responsive" alt="Jogo Clássico da Cobra"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 adipiscing">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/snk-gestao.png" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>SNK - Gestão Financeira</h4>
-                  </div>
-                </div>
-              </div>
-              <img src="img/portfolio/snk-gestao small.png" class="img-responsive" alt="Project Title"> </a> </div>
+                <img src="img/portfolio/snk-gestao small.png" class="img-responsive" alt="SNK"> </a> 
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/Gestao-bank.png" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>Gestão de Crédito</h4>
+          <div class="portfolio-item small-project">
+            <div class="hover-bg"> 
+              <a href="img/portfolio/Gestao-bank.png" title="Gestão de Crédito" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h5>Gestão Crédito</h5>
+                      <p style="font-size: 12px;">Análise de risco com ML</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="img/portfolio/Gestao-bank small.png" class="img-responsive" alt="Project Title"> </a> </div>
+                <img src="img/portfolio/Gestao-bank small.png" class="img-responsive" alt="Gestão Crédito"> </a> 
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 adipiscing">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/tela-logintk.png" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>Tela de Login</h4>
+          <div class="portfolio-item small-project">
+            <div class="hover-bg"> 
+              <a href="img/portfolio/tela-logintk.png" title="Tela de Login" data-lightbox-gallery="gallery1">
+                <div class="hover-text">
+                  <div class="overlay-caption">
+                    <div class="overlay-content">
+                      <h5>Login UI</h5>
+                      <p style="font-size: 12px;">Interface moderna Tkinter</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <img src="img/portfolio/tela-logintk small.png" class="img-responsive" alt="Project Title"> </a> </div>
+                <img src="img/portfolio/tela-logintk small.png" class="img-responsive" alt="Login"> </a> 
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 dolor">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/projeto-senacrs.png" title="Projeto de Distribuição de Atendimento Senac RS" data-lightbox-gallery="gallery1">
+          <div class="portfolio-item small-project">
+            <div class="hover-bg"> <a href="img/portfolio/projeto-senacrs.png" title="TCC - Distribuição de Atendimento" data-lightbox-gallery="gallery1">
               <div class="hover-text">
                 <div class="overlay-caption">
                   <div class="overlay-content">
-                    <h4>TCC - Projeto de Distribuição de Atendimento Senac RS</h4>
+                    <h5>TCC Senac RS</h5>
+                    <p style="font-size: 12px;">Análise de atendimento</p>
                   </div>
                 </div>
               </div>
-              <img src="img/portfolio/projeto-senacrs small.png" class="img-responsive" alt="Projeto de Distribuição de Atendimento Senac RS"> </a> </div>
+              <img src="img/portfolio/projeto-senacrs small.png" class="img-responsive" alt="TCC"> </a> 
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 dolor">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/protipo.png" title="Prototipo de tela de aplicativo" data-lightbox-gallery="gallery1">
+          <div class="portfolio-item small-project">
+            <div class="hover-bg"> <a href="img/portfolio/protipo.png" title="Prototipação Blend" data-lightbox-gallery="gallery1">
               <div class="hover-text">
                 <div class="overlay-caption">
                   <div class="overlay-content">
-                    <h4>Blend - Prototipação de telas para aplicativo de tatuagem</h4>
+                    <h5>Blend - Prototipação</h5>
+                    <p style="font-size: 12px;">UX/UI para app tatuagem</p>
                   </div>
                 </div>
               </div>
-              <img src="img/portfolio/protipo.png" class="img-responsive" alt="Prototipação de telas para aplicativo de tatuagem"> </a> </div>
+              <img src="img/portfolio/protipo.png" class="img-responsive" alt="Prototipação"> </a> 
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/prototipoblend.png" title="Wireframming para Aplicativo" data-lightbox-gallery="gallery1">
+          <div class="portfolio-item small-project">
+            <div class="hover-bg"> <a href="img/portfolio/prototipoblend.png" title="Wireframe Blend" data-lightbox-gallery="gallery1">
               <div class="hover-text">
                 <div class="overlay-caption">
                   <div class="overlay-content">
-                    <h4>Blend - Wireframming para Aplicativo</h4>
+                    <h5>Blend - Wireframe</h5>
+                    <p style="font-size: 12px;">Arquitetura de informação</p>
                   </div>
                 </div>
               </div>
-              <img src="img/portfolio/prototipoblend.png" class="img-responsive" alt="Wireframming para Aplicativo"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 adipiscing">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/monitoramento.jpg" title="Alerta.Aí - Automação de envio de Mensagens via Whatsapp" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h4>Alerta.Aí - Automação de envio de Mensagens via Whatsapp </h4>
-                  </div>
-                </div>
-              </div>
-              <img src="img/portfolio/monitoramento.jpg" class="img-responsive" alt="Alerta.Aí - Automação de envio de Mensagens via Whatsapp"> </a> </div>
+              <img src="img/portfolio/prototipoblend.png" class="img-responsive" alt="Wireframe"> </a> 
+            </div>
           </div>
         </div>
 
       </div>
     </div>
   </div>
-</div>
-<!-- Contact Section -->
-<div id="contact">
+</main>
+<!-- About & Contact Section -->
+<section id="contact">
   <div class="container">
-    <h2>Sobre mim</h2>
+    <header class="section-header">
+      <h2>Sobre mim</h2>
+    </header>
     <div class="col-md-6">
-      <div class="section-title">
-        <div class="row"> <img src="img/about.jpg" class="img-responsive pull-left" alt="">
-          <p>Sou Igor Rodrigues, desenvolvedor de software com uma paixão por criar soluções eficientes e inovadoras. Com experiência em desenvolvimento desktop e automação, tenho trabalhado em diversos projetos que abrangem desde a criação de sites responsivos e dinâmicos até sistemas complexos de automação e integração de APIs. Meu objetivo é sempre buscar a melhor solução para cada problema, utilizando as mais recentes tecnologias e práticas de desenvolvimento.</p>
-          <p>Atualmente, estou focado em projetos que envolvem Python, incluindo automação de processos e integração de serviços como emissão de notas fiscais e monitoramento de dados em tempo real. Sou um entusiasta por aprender continuamente e adoro compartilhar meu conhecimento com a comunidade, seja através de colaborações em projetos open-source ou de publicações técnicas. Quando não estou programando, gosto de explorar novas tecnologias, participar de eventos de tecnologia e passar tempo com minha família e amigos.</p>
-          <div class="social">
-            <ul>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
+      <article class="about-section">
+        <div class="row"> 
+          <img src="img/about.jpg" class="img-responsive pull-left" alt="Igor Rodrigues - Desenvolvedor Python"  loading="lazy">
+          <div class="about-content">
+            <h3>Desenvolvedor Python &amp; Especialista em Automação</h3>
+            <p><strong>Mais de 3 anos</strong> criando soluções tecnológicas que transformam negócios. Especializado em <strong>automação de processos</strong>, <strong>sistemas para MEI</strong> e <strong>análise de dados</strong>, já desenvolvi projetos que impactaram diretamente a eficiência operacional de pequenos empreendedores.</p>
+            <div class="highlight-projects">
+              <h4>🚀 Principais Realizações:</h4>
+              <ul>
+                <li><strong>SmartBiz:</strong> Sistema completo de gestão MEI com emissão automática de NFe</li>
+                <li><strong>Alerta.Aí:</strong> Plataforma de monitoramento com automação WhatsApp</li>
+                <li><strong>PDX:</strong> Controle de vendas com relatórios gerenciais avançados</li>
+              </ul>
+            </div>
+            <div class="tech-expertise">
+              <h4>💻 Stack Tecnológica:</h4>
+              <div class="tech-grid">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Tkinter</span>
+                <span class="tech-item">SQLite</span>
+                <span class="tech-item">APIs REST</span>
+                <span class="tech-item">WhatsApp API</span>
+                <span class="tech-item">Automação</span>
+                <span class="tech-item">Análise de Dados</span>
+                <span class="tech-item">UX/UI Design</span>
+              </div>
+            </div>
+            <p><strong>Minha missão:</strong> Desenvolver soluções que simplifiquem processos complexos e gerem valor real para pequenos e médios negócios. Cada projeto é uma oportunidade de criar algo que faça diferença na rotina dos usuários.</p>
+            <div class="social">
+              <ul>
+                <li><a href="https://instagram.com/igorrodrigz" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/5555999999999" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="https://linkedin.com/in/igorrodrigues" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/igorrodrigz" target="_blank"><i class="fa fa-github"></i></a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </article>
     </div>
     <div class="col-md-5 col-md-offset-1">
       <div class="section-title">
-        <p>Para contatos e orçamentos utilize as redes sociais ou email <strong>rodrigues.igor.ir@gmail.com</strong> ou preencha a baixo.</p>
+        <h3>Vamos criar algo incrível juntos?</h3>
+        <p>Especialista em <strong>automação para MEI</strong>, <strong>sistemas de gestão</strong> e <strong>integração de APIs</strong>. Transformo ideias em soluções funcionais que geram resultados.</p>
+        <div class="contact-highlights">
+          <div class="highlight-item">
+            <i class="fa fa-rocket"></i>
+            <span>Desenvolvimento ágil e focado em resultados</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fa fa-cogs"></i>
+            <span>Automação de processos complexos</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fa fa-chart-line"></i>
+            <span>Sistemas com análise de dados integrada</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fa fa-mobile"></i>
+            <span>Interfaces intuitivas e responsivas</span>
+          </div>
+        </div>
+        <div class="contact-methods">
+          <p><strong>📧 Email:</strong> <a href="mailto:rodrigues.igor.ir@gmail.com">rodrigues.igor.ir@gmail.com</a></p>
+          <p><strong>💬 WhatsApp:</strong> <a href="https://wa.me/5555999999999" target="_blank">Chamar no WhatsApp</a></p>
+          <p><strong>💼 LinkedIn:</strong> <a href="https://linkedin.com/in/igorrodrigues" target="_blank">Conectar no LinkedIn</a></p>
+        </div>
+        <p>Ou preencha o formulário abaixo para um orçamento personalizado:</p>
       </div>
       <form name="sentMessage" id="contactForm" novalidate>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required="required">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <input type="email" id="email" name="email" class="form-control" placeholder="Seu email" required="required">
               <p class="help-block text-danger"></p>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <select name="project_type" class="form-control" required>
+            <option value="">Tipo de projeto</option>
+            <option value="sistema_gestao">Sistema de Gestão MEI</option>
+            <option value="automacao">Automação de Processos</option>
+            <option value="integracao_api">Integração de APIs</option>
+            <option value="analise_dados">Análise de Dados</option>
+            <option value="outro">Outro projeto</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Descreva seu projeto ou necessidade..." required></textarea>
           <p class="help-block text-danger"></p>
         </div>
         <div id="success"></div>
-        <button type="submit" class="btn btn-default btn-lg">Enviar</button>
+        <button type="submit" class="btn btn-custom btn-lg">
+          <i class="fa fa-paper-plane"></i> Solicitar Orçamento
+        </button>
       </form>
     </div>
   </div>
-</div>
-<div id="footer">
+</section>
+<footer id="footer">
   <div class="container">
-    <p>&copy; 2024 Igor Rodrigues. Todos os direitos.</p>
+    <div class="row">
+      <div class="col-md-8">
+        <p>&copy; 2024 Igor Rodrigues. Todos os direitos reservados. | Desenvolvedor Python &amp; Especialista em Automação</p>
+      </div>
+      <div class="col-md-4 text-right">
+        <a href="mailto:rodrigues.igor.ir@gmail.com" class="footer-link">
+          <i class="fa fa-envelope"></i> Contato
+        </a>
+        <a href="https://wa.me/5555999999999" class="footer-link" target="_blank">
+          <i class="fa fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
   </div>
-</div>
+</footer>
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/SmoothScroll.js"></script> 
 <script type="text/javascript" src="js/nivo-lightbox.js"></script> 
 <script type="text/javascript" src="js/jquery.isotope.js"></script> 
