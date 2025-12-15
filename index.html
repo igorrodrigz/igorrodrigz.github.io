@@ -170,6 +170,27 @@
       margin-bottom: 16px;
     }
 
+    .card ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .card ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -458,6 +479,71 @@
       </div>
     </div>
 
+    <!-- EXPERIENCE -->
+    <section id="experiencia">
+      <h2 class="section-title">Experiência Profissional</h2>
+      <p class="section-subtitle">
+        Atuação prática em desenvolvimento backend, dados, BI e automação, com impacto direto em negócios, órgãos públicos e times técnicos.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>MR Solutions <span style="color:var(--muted); font-weight:400">(2022 – Atual)</span></h3>
+          <p>
+            Desenvolvedor Backend Python atuando na criação de soluções sob medida para empresas de diferentes segmentos,
+            com foco em dados, automação de processos e integração de sistemas.
+          </p>
+          <ul style="margin-left:16px; color:var(--muted); font-size:15px;">
+            <li>Desenvolvimento de sistemas em Django para gestão de serviços e dados.</li>
+            <li>Automação de processos e canais de atendimento.</li>
+            <li>Integração de sistemas de terceiros com foco em segurança e eficiência.</li>
+          </ul>
+          <div class="tags" style="margin-top:16px;">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">APIs</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Livon <span style="color:var(--muted); font-weight:400">(2025)</span></h3>
+          <p>
+            Analista de Dados e Programador atuando no suporte à equipe de BI e IA,
+            com foco em consultas SQL, datasets e performance analítica.
+          </p>
+          <ul style="margin-left:16px; color:var(--muted); font-size:15px;">
+            <li>Criação e otimização de consultas SQL, views e functions.</li>
+            <li>Configuração e administração do Apache Superset.</li>
+            <li>Correção de bugs em front-end e back-end.</li>
+          </ul>
+          <div class="tags" style="margin-top:16px;">
+            <span class="tag">SQL</span>
+            <span class="tag">Apache Superset</span>
+            <span class="tag">BI</span>
+            <span class="tag">DBeaver</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Fundição Reciclar <span style="color:var(--muted); font-weight:400">(2024 – 2025)</span></h3>
+          <p>
+            Programador e projetista CNC atuando em projetos industriais e artísticos de grande escala.
+          </p>
+          <ul style="margin-left:16px; color:var(--muted); font-size:15px;">
+            <li>Vetorização e programação CNC (Código G).</li>
+            <li>Operação de máquinas CNC a laser e fresa.</li>
+            <li>Desenvolvimento de peças e fachadas de grande porte.</li>
+          </ul>
+          <div class="tags" style="margin-top:16px;">
+            <span class="tag">CNC</span>
+            <span class="tag">CorelDRAW</span>
+            <span class="tag">Engenharia de Produção</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="projetos">
       <h2 class="section-title">Projetos em Destaque</h2>
@@ -552,6 +638,7 @@
             <span class="tag">Python</span>
             <span class="tag">Dados</span>
             <span class="tag">APIs</span>
+            <span class="tag">CSV</span>
           </div>
           <div class="card-links">
             <a href="https://github.com/igorrodrigz/GeoCode" target="_blank">
@@ -562,11 +649,12 @@
 
         <div class="card">
           <h3>🏪 Lorien – Multi-tenant Django</h3>
-          <p>Plataforma para gestão de oficinas com arquitetura multi-tenant.</p>
+          <p>Plataforma para gestão de negócios com arquitetura multi-tenant.</p>
           <div class="tags">
             <span class="tag">Django</span>
-            <span class="tag">PostgreSQL</span>
+            <span class="tag">MySQL</span>
             <span class="tag">SaaS</span>
+            <span class="tag">Produção</span>
           </div>
           <div class="card-links">
             <a href="https://github.com/igorrodrigz/lorien" target="_blank">
@@ -577,10 +665,13 @@
 
         <div class="card">
           <h3>⏱️ TimeStamp</h3>
-          <p>Sistema de controle de tempo e análise de produtividade.</p>
+          <p>Ferramenta de registro de imagens com marcação temporal para análise e evidências via template.</p>
           <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Analytics</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Marcação Temporal</span>
+            <span class="tag">Defesa Civil do RS</span>
           </div>
           <div class="card-links">
             <a href="https://github.com/igorrodrigz/TimeStamp" target="_blank">
@@ -591,11 +682,11 @@
 
         <div class="card">
           <h3>💼 SmartBiz</h3>
-          <p>Sistema desktop de gestão MEI com emissão de NFe automática.</p>
+          <p>Sistema desktop de gestão MEI com emissão de boletoss automática.</p>
           <div class="tags">
             <span class="tag">Python/Tkinter</span>
             <span class="tag">SQLite</span>
-            <span class="tag">API NFe</span>
+            <span class="tag">Boletos</span>
           </div>
           <div class="card-links">
             <a href="https://github.com/igorrodrigz/SmartBiz" target="_blank">
@@ -662,7 +753,10 @@
             <span class="tag">Superset</span>
             <span class="tag">Pandas</span>
             <span class="tag">ETL</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
             <span class="tag">Análise Exploratória</span>
+            <span class="tag">Visualização de Dados</span>
           </div>
         </div>
 
@@ -684,6 +778,7 @@
             <span class="tag">MCP</span>
             <span class="tag">Ollama</span>
             <span class="tag">Geoprocessamento</span>
+            <span class="tag">Web Scraping</span>
           </div>
         </div>
 
@@ -692,8 +787,6 @@
           <div class="skill-tags">
             <span class="tag">Git</span>
             <span class="tag">GitHub</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Docker</span>
             <span class="tag">VS Code</span>
           </div>
         </div>
@@ -705,6 +798,7 @@
             <span class="tag">SOLID</span>
             <span class="tag">TDD</span>
             <span class="tag">Code Review</span>
+            <span class="tag">Desenvolvimento Assistido por IA</span>
           </div>
         </div>
       </div>
@@ -730,7 +824,7 @@
           <p>Conecte-se comigo profissionalmente</p>
         </a>
 
-        <a href="https://wa.me/5555999999999" target="_blank" class="contact-card">
+        <a href="https://wa.me/5555936181310" target="_blank" class="contact-card">
           <i class="fa-brands fa-whatsapp"></i>
           <h4>WhatsApp</h4>
           <p>Conversa rápida sobre projetos</p>
