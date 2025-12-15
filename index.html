@@ -1,664 +1,754 @@
+<!-- Portfólio Profissional – UI/UX Avançado para Recrutadores -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#007bff">
-<meta name="robots" content="index, follow">
-<title>Igor Rodrigues - Centralização de Porfólio</title>
-<meta name="description" content="Desenvolvedor Python especializado em automação, sistemas para MEI, análise de dados e integração de APIs. Criador dos projetos SmartBiz, Alerta.Aí e PDX.">
-<meta name="author" content="Igor Rodrigues">
-<meta name="keywords" content="desenvolvedor python, automação whatsapp, sistemas MEI, análise dados, gestão financeira, simulador alagamentos, integração APIs">
-<!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Igor Rodrigues - Desenvolvedor Python &amp; Analista de Dados">
-<meta property="og:description" content="Especialista em automação, sistemas para MEI e análise de dados. Criador dos projetos SmartBiz e Alerta.Aí">
-<meta property="og:image" content="img/portfolio/igor-profile.jpg">
-<meta property="og:url" content="https://igorrodrigz.github.io">
-<meta property="og:type" content="website">
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Igor Rodrigues - Desenvolvedor Python">
-<meta name="twitter:description" content="Automação, sistemas MEI e análise de dados">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Igor Rodrigues | Backend Python • Dados • BI</title>
 
-<!-- Favicons
-    ================================================== -->
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-<!-- Stylesheet
-    ================================================== -->
-<link rel="stylesheet" type="text/css"  href="css/style.css">
-<style>
-/* Tech Stack Styling */
-.tech-stack {
-  margin-top: 10px;
-}
-.tech-stack .tech {
-  background: rgba(255,255,255,0.9);
-  color: #333;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 11px;
-  margin-right: 5px;
-  margin-bottom: 3px;
-  display: inline-block;
-}
-.about-content h3 {
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-.highlight-projects {
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-.highlight-projects h4 {
-  color: #007bff;
-  margin-bottom: 10px;
-}
-.highlight-projects ul {
-  margin-bottom: 0;
-}
-.highlight-projects li {
-  margin-bottom: 8px;
-}
-.tech-expertise {
-  margin: 20px 0;
-}
-.tech-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-}
-.tech-item {
-  background: #007bff;
-  color: white;
-  padding: 4px 12px;
-  border-radius: 15px;
-  font-size: 12px;
-  font-weight: 500;
-}
-.contact-highlights {
-  margin: 20px 0;
-}
-.highlight-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  padding: 8px 0;
-}
-.highlight-item i {
-  color: #007bff;
-  margin-right: 10px;
-  width: 20px;
-}
-.contact-methods {
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-.contact-methods p {
-  margin-bottom: 8px;
-}
-.contact-methods a {
-  color: #007bff;
-  text-decoration: none;
-}
-.contact-methods a:hover {
-  text-decoration: underline;
-}
-.portfolio-item .overlay-content p {
-  font-size: 13px;
-  line-height: 1.4;
-  margin-bottom: 10px;
-  opacity: 0.9;
-}
-.intro-text .subtitle {
-  font-size: 16px;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-select.form-control {
-  height: 45px;
-}
-.btn-custom i {
-  margin-right: 8px;
-}
-</style>
-<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
-<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --surface: #111622;
+      --primary: #6cf2c2;
+      --secondary: #7aa2ff;
+      --text: #e6eaf2;
+      --muted: #9aa3b2;
+      --border: #1f2536;
+    }
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(1200px circle at 20% 10%, #12172a, transparent 40%),
+                  radial-gradient(1000px circle at 80% 30%, #0f2a22, transparent 35%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 32px;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(108,242,194,0.12);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+
+    .cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.25s ease;
+      border: 1px solid var(--border);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #3ddc97);
+      color: #0b0e14;
+    }
+
+    .btn-primary:hover { opacity: 0.9; }
+
+    .btn-outline {
+      color: var(--text);
+      background: transparent;
+    }
+
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+    /* SIDE CARD */
+    .profile-card {
+      background: linear-gradient(180deg, #12182b, #0f1423);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .profile-card ul {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .profile-card li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      color: var(--muted);
+    }
+
+    /* SECTIONS */
+    section { margin-top: 120px; }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+
+    /* PROJECTS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #12182b, #0f1423);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+      transition: transform 0.25s ease, border 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--secondary);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(122,162,255,0.12);
+      color: var(--secondary);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .tag:hover {
+      background: var(--secondary);
+      color: var(--bg);
+    }
+
+    /* CARD ENHANCEMENTS */
+    .card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      padding: 4px 8px;
+      background: rgba(108, 242, 194, 0.1);
+      border-radius: 4px;
+      width: fit-content;
+      letter-spacing: 0.5px;
+    }
+
+    .card.featured {
+      border: 1px solid rgba(108, 242, 194, 0.25);
+      background: linear-gradient(135deg, rgba(108, 242, 194, 0.05) 0%, #12182b 100%);
+    }
+
+    .card-details {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      padding: 12px;
+      background: rgba(108, 242, 194, 0.05);
+      border-radius: 8px;
+      line-height: 1.5;
+    }
+
+    .card-details strong {
+      color: var(--primary);
+    }
+
+    .card-links {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(108, 242, 194, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .card-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      background: rgba(108, 242, 194, 0.08);
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(108, 242, 194, 0.15);
+    }
+
+    .card-links a:hover {
+      background: var(--primary);
+      color: var(--bg);
+      border-color: var(--primary);
+    }
+
+    /* GRID VARIANTS */
+    .grid-compact {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    /* SKILLS SECTION */
+    #skills {
+      background: linear-gradient(180deg, transparent, rgba(108, 242, 194, 0.02));
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .skill-group {
+      background: linear-gradient(180deg, #12182b, #0f1423);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.25s ease;
+    }
+
+    .skill-group:hover {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, #1a1f2e, #12182b);
+    }
+
+    .skill-group h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-group h4::before {
+      content: '▸';
+      color: var(--primary);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* CONTACT SECTION */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      background: linear-gradient(180deg, #12182b, #0f1423);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .contact-card:hover {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, #1a1f2e, #12182b);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(108, 242, 194, 0.1);
+    }
+
+    .contact-card i {
+      font-size: 40px;
+      color: var(--primary);
+      transition: all 0.25s ease;
+    }
+
+    .contact-card:hover i {
+      transform: scale(1.1);
+    }
+
+    .contact-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .contact-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 140px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+      
+      .section-title { font-size: 1.8rem; }
+      .grid, .grid-compact { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      
+      .cta { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0; }
+      h1 { font-size: 28px; }
+      .hero p { font-size: 15px; }
+      
+      .section-title { font-size: 1.5rem; }
+      .profile-card { padding: 20px; }
+      section { padding: 60px 20px; margin-top: 0; }
+      
+      .contact-grid { grid-template-columns: 1fr; }
+      .card-links { flex-direction: column; }
+      .card-links a { width: 100%; justify-content: center; }
+    }
+  </style>
 </head>
 <body>
-<!-- Header -->
-<header id="header">
-  <div class="intro">
-    <div class="overlay">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-md-8">
-            <div class="intro-text">
-              <h1>Igor Rodrigues</h1>
-              <p>Desenvolvedor Backend Python | Analista de Dados | BI</p>
-              <p class="subtitle">
-              Desenvolvimento de sistemas orientados a dados, automação inteligente e IA aplicada
-              </p>
-              <a href="#portfolio" class="btn btn-custom btn-lg">Projetos</a>
-              <a href="#contact" class="btn btn-custom btn-lg">Contato</a>
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- Portfolio Section -->
-<main id="portfolio">
   <div class="container">
-    <section class="section-title">
-      <h2>⭐ Projetos em Destaque</h2>
-      <p class="section-description">Principais soluções desenvolvidas</p>
-    </section>
 
-    <!-- Featured Projects -->
-    <div class="featured-projects-section">
-      <div class="row">
-        <div class="col-sm-6 col-md-4 featured-project">
-          <div class="portfolio-item featured">
-            <div class="hover-bg">
-              <a href="img/portfolio/Alegrete9m.png" title="Alerta.Aí - Sistema de Monitoramento e Alertas" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h4>🌊 Alerta.Aí</h4>
-                      <p><strong>Monitoramento Inteligente de Alagamentos</strong></p>
-                      <p>Sistema de simulação de alagamentos urbanos com automação de alertas via WhatsApp e análise de dados meteorológicos em tempo real.</p>
-                      <div class="tech-stack">
-                        <span class="tech">Python</span>
-                        <span class="tech">WhatsApp API</span>
-                        <span class="tech">Dados Meteorológicos</span>
-                        <span class="tech">Automação</span>
-                        <span class="tech">Web</span>
-                      </div>
-                      <div class="project-links">
-                        <a href="https://github.com/igorrodrigz/Ferramentas-alerta" target="_blank" class="btn-github-small">
-                          <i class="fa fa-github"></i> GitHub
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/Alegrete9m small.png" class="img-responsive" alt="Alerta.Aí" loading="lazy">
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 featured-project">
-          <div class="portfolio-item featured">
-            <div class="hover-bg">
-              <a href="img/portfolio/mcp-guia.png" title="MCP-GuiaTurista - Chat com Banco de Dados" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h4>💬 MCP-GuiaTurista</h4>
-                      <p><strong>Chat Inteligente com Banco de Dados</strong></p>
-                      <p>Sistema inovador de interação com banco de dados relacional via linguagem natural. Converte perguntas em queries SQL automaticamente.</p>
-                      <div class="tech-stack">
-                        <span class="tech">Python</span>
-                        <span class="tech">NLP</span>
-                        <span class="tech">LLM</span>
-                        <span class="tech">SQL</span>
-                        <span class="tech">MCP</span>
-                      </div>
-                      <div class="project-links">
-                        <a href="https://github.com/igorrodrigz/MCP-GuiaTurista" target="_blank" class="btn-github-small">
-                          <i class="fa fa-github"></i> GitHub
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/mcp-guia small.png" class="img-responsive" alt="MCP-GuiaTurista" loading="lazy">
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 featured-project">
-          <div class="portfolio-item featured">
-            <div class="hover-bg">
-              <a href="img/portfolio/idoso-seguro.png" title="Idoso Seguro - App de Proteção" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h4>👴 Idoso Seguro</h4>
-                      <p><strong>Aplicativo de Proteção e Monitoramento</strong></p>
-                      <p>App mobile com localização GPS, alertas de saúde, contatos de emergência e integração com familiares para proteção de idosos.</p>
-                      <div class="tech-stack">
-                        <span class="tech">Python/Kotlin</span>
-                        <span class="tech">GPS/Localização</span>
-                        <span class="tech">Saúde</span>
-                        <span class="tech">Mobile</span>
-                        <span class="tech">IoT</span>
-                      </div>
-                      <div class="project-links">
-                        <a href="https://github.com/igorrodrigz" target="_blank" class="btn-github-small">
-                          <i class="fa fa-github"></i> GitHub
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/idoso-seguro small.png" class="img-responsive" alt="Idoso Seguro" loading="lazy">
-              </a>
-            </div>
-          </div>
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <span class="badge">Backend Python • Dados • BI</span>
+        <h1>Desenvolvimento orientado a dados, impacto real e decisões inteligentes.</h1>
+        <p>
+          Desenvolvedor Backend Python e Analista de Dados com experiência em BI, automação e soluções
+          críticas para órgãos públicos e empresas. Foco em performance, clareza arquitetural e
+          valor de negócio.
+        </p>
+        <div class="cta">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <a href="https://github.com/igorrodrigz" class="btn btn-outline">GitHub</a>
+          <a href="https://www.linkedin.com/in/igorrodriguesdevpy/" class="btn btn-outline">LinkedIn</a>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-6 col-md-4 featured-project">
-          <div class="portfolio-item featured">
-            <div class="hover-bg">
-              <a href="img/portfolio/lorien.png" title="Lorien - Django Multi-tenant" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h4>🏪 Lorien</h4>
-                      <p><strong>Sistema Multi-tenant Django</strong></p>
-                      <p>Plataforma web escalável para gestão de oficinas e ateliers com arquitetura multi-tenant, suportando múltiplas empresas com isolamento de dados.</p>
-                      <div class="tech-stack">
-                        <span class="tech">Python</span>
-                        <span class="tech">Django</span>
-                        <span class="tech">PostgreSQL</span>
-                        <span class="tech">Multi-tenant</span>
-                        <span class="tech">Rest API</span>
-                      </div>
-                      <div class="project-links">
-                        <a href="https://github.com/igorrodrigz/lorien" target="_blank" class="btn-github-small">
-                          <i class="fa fa-github"></i> GitHub
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/lorien small.png" class="img-responsive" alt="Lorien" loading="lazy">
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-4 featured-project">
-          <div class="portfolio-item featured">
-            <div class="hover-bg">
-              <a href="img/portfolio/geocode.png" title="GeoCode - Enriquecimento de Dados Geográficos" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h4>🗺️ GeoCode</h4>
-                      <p><strong>Localizador de Coordenadas Geográficas</strong></p>
-                      <p>Ferramenta de enriquecimento de dados que processa arquivos CSV com endereços/CEPs e retorna coordenadas precisas via APIs de geolocalização.</p>
-                      <div class="tech-stack">
-                        <span class="tech">Python</span>
-                        <span class="tech">Geolocalização</span>
-                        <span class="tech">CSV/Dados</span>
-                        <span class="tech">APIs Google</span>
-                        <span class="tech">Pandas</span>
-                      </div>
-                      <div class="project-links">
-                        <a href="https://github.com/igorrodrigz/GeoCode" target="_blank" class="btn-github-small">
-                          <i class="fa fa-github"></i> GitHub
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/geocode small.png" class="img-responsive" alt="GeoCode" loading="lazy">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Other Projects Section -->
-    <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid #e9ecef;">
-      <section class="section-title">
-        <h2>🧪 Outros Projetos</h2>
-        <p class="section-description">Projetos acadêmicos, prototipações e estudos</p>
-      </section>
-      
-      <div class="categories">
-        <ul class="cat">
-          <li>
-            <ol class="type">
-              <li><a href="#" data-filter="*" class="active">Todos</a></li>
-              <li><a href="#" data-filter=".lorem">Desenvolvimento</a></li>
-              <li><a href="#" data-filter=".dolor">Análises</a></li>
-              <li><a href="#" data-filter=".adipiscing">Jogos e Prototipações</a></li>
-            </ol>
-          </li>
+      <div class="profile-card">
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Uruguaiana / RS</li>
+          <li><i class="fa-solid fa-briefcase"></i> Backend Python • Dados • BI</li>
+          <li><i class="fa-solid fa-database"></i> MySQL • Superset • SQL Avançado</li>
+          <li><i class="fa-solid fa-brain"></i> IA Aplicada • Chatbots • MCP</li>
+          <li><i class="fa-solid fa-plane"></i> Disponível para mudança</li>
         </ul>
       </div>
     </div>
 
-    <div class="row">
-      <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 lorem">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg"> 
-              <a href="img/portfolio/Pandora-SmartBiz.png" title="SmartBiz - Sistema de Gestão para MEI" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h5>SmartBiz</h5>
-                      <p style="font-size: 12px;">Sistema de gestão MEI com Tkinter</p>
-                      <div class="tech-stack" style="font-size: 9px;">
-                        <span class="tech">Python</span>
-                        <span class="tech">Tkinter</span>
-                        <span class="tech">SQLite</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/Pandora-SmartBiz small.png" class="img-responsive" alt="SmartBiz" loading="lazy">
-              </a>
-            </div>
+    <!-- PROJECTS -->
+    <section id="projetos">
+      <h2 class="section-title">Projetos em Destaque</h2>
+      <p class="section-subtitle">
+        Soluções reais desenvolvidas com foco em dados, automação, arquitetura limpa e impacto social.
+      </p>
+
+      <div class="grid">
+        <div class="card featured">
+          <div class="card-badge">⭐ Principal</div>
+          <h3>🌊 Alerta.Aí – Monitoramento Hídrico</h3>
+          <p>
+            Sistema de resposta a desastres com projeção altimétrica, mapas de risco em tempo real e 
+            alertas automáticos via WhatsApp para defesa civil e população.
+          </p>
+          <div class="card-details">
+            <strong>Stack:</strong> Python • Geoprocessamento • WhatsApp API • Análise de Dados
           </div>
-        </div>
-        <div class="col-sm-6 col-md-4 lorem">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg">
-              <a href="img/portfolio/pdx.png" title="PDX - Controle de Vendas" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h5>PDX</h5>
-                      <p style="font-size: 12px;">Sistema de vendas com relatórios</p>
-                      <div class="tech-stack" style="font-size: 9px;">
-                        <span class="tech">Python</span>
-                        <span class="tech">Database</span>
-                        <span class="tech">Relatórios</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/pdx small.png" class="img-responsive" alt="PDX" loading="lazy">
-              </a>
-            </div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Geoprocessamento</span>
+            <span class="tag">Automação</span>
+            <span class="tag">WhatsApp</span>
           </div>
-        </div>
-        <div class="col-sm-6 col-md-4 adipiscing">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg"> 
-              <a href="img/portfolio/jogo-cobra.png" title="Jogo da Cobra em Python" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h5>🐍 Jogo da Cobra</h5>
-                      <p style="font-size: 12px;">Clássico jogo em Python/Pygame</p>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/jogo-cobra small.png" class="img-responsive" alt="Jogo da Cobra"> </a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 adipiscing">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg"> 
-              <a href="img/portfolio/snk-gestao.png" title="SNK - Gestão Financeira" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h5>SNK - Gestão</h5>
-                      <p style="font-size: 12px;">Gestão financeira com Tkinter</p>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/snk-gestao small.png" class="img-responsive" alt="SNK"> </a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 lorem">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg"> 
-              <a href="img/portfolio/Gestao-bank.png" title="Gestão de Crédito" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h5>Gestão Crédito</h5>
-                      <p style="font-size: 12px;">Análise de risco com ML</p>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/Gestao-bank small.png" class="img-responsive" alt="Gestão Crédito"> </a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 adipiscing">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg"> 
-              <a href="img/portfolio/tela-logintk.png" title="Tela de Login" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <div class="overlay-caption">
-                    <div class="overlay-content">
-                      <h5>Login UI</h5>
-                      <p style="font-size: 12px;">Interface moderna Tkinter</p>
-                    </div>
-                  </div>
-                </div>
-                <img src="img/portfolio/tela-logintk small.png" class="img-responsive" alt="Login"> </a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 dolor">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg"> <a href="img/portfolio/projeto-senacrs.png" title="TCC - Distribuição de Atendimento" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h5>TCC Senac RS</h5>
-                    <p style="font-size: 12px;">Análise de atendimento</p>
-                  </div>
-                </div>
-              </div>
-              <img src="img/portfolio/projeto-senacrs small.png" class="img-responsive" alt="TCC"> </a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 dolor">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg"> <a href="img/portfolio/protipo.png" title="Prototipação Blend" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h5>Blend - Prototipação</h5>
-                    <p style="font-size: 12px;">UX/UI para app tatuagem</p>
-                  </div>
-                </div>
-              </div>
-              <img src="img/portfolio/protipo.png" class="img-responsive" alt="Prototipação"> </a> 
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 lorem">
-          <div class="portfolio-item small-project">
-            <div class="hover-bg"> <a href="img/portfolio/prototipoblend.png" title="Wireframe Blend" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <div class="overlay-caption">
-                  <div class="overlay-content">
-                    <h5>Blend - Wireframe</h5>
-                    <p style="font-size: 12px;">Arquitetura de informação</p>
-                  </div>
-                </div>
-              </div>
-              <img src="img/portfolio/prototipoblend.png" class="img-responsive" alt="Wireframe"> </a> 
-            </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/Ferramentas-alerta" target="_blank">
+              <i class="fa-brands fa-github"></i> Código
+            </a>
           </div>
         </div>
 
+        <div class="card featured">
+          <div class="card-badge">⭐ Principal</div>
+          <h3>💬 MCP – Guia Turístico Inteligente</h3>
+          <p>
+            Assistente digital inteligente com IA contextual para recomendações turísticas, 
+            desenvolvido em parceria com Secretaria de Turismo. Integração total com banco de dados local.
+          </p>
+          <div class="card-details">
+            <strong>Stack:</strong> Django • MySQL • Ollama (IA Local) • REST API
+          </div>
+          <div class="tags">
+            <span class="tag">Django</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">IA Local</span>
+            <span class="tag">Chatbot</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/MCP-GuiaTurista" target="_blank">
+              <i class="fa-brands fa-github"></i> Código
+            </a>
+          </div>
+        </div>
+
+        <div class="card featured">
+          <div class="card-badge">⭐ Principal</div>
+          <h3>👴 Idoso Seguro – Educação Contra Fraudes</h3>
+          <p>
+            Chatbot preventivo para orientação de idosos contra golpes digitais, fraudes financeiras 
+            e práticas maliciosas. Impacto social direto em segurança digital inclusiva.
+          </p>
+          <div class="card-details">
+            <strong>Stack:</strong> WhatsApp API • IA Conversacional • UX Acessível
+          </div>
+          <div class="tags">
+            <span class="tag">WhatsApp</span>
+            <span class="tag">IA Conversacional</span>
+            <span class="tag">Segurança</span>
+            <span class="tag">Inclusão</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz" target="_blank">
+              <i class="fa-brands fa-github"></i> Mais Info
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</main>
-<!-- About & Contact Section -->
-<section id="contact">
-  <div class="container">
-    <header class="section-header">
-      <h2>Sobre mim</h2>
-    </header>
-    <div class="col-md-6">
-      <article class="about-section">
-        <div class="row"> 
-          <img src="img/about.jpg" class="img-responsive pull-left" alt="Igor Rodrigues - Desenvolvedor Python"  loading="lazy">
-          <div class="about-content">
-            <h3>Desenvolvedor Python &amp; Especialista em Automação</h3>
-            <p><strong>Mais de 3 anos</strong> criando soluções tecnológicas que transformam negócios. Especializado em <strong>automação de processos</strong>, <strong>sistemas para MEI</strong> e <strong>análise de dados</strong>, já desenvolvi projetos que impactaram diretamente a eficiência operacional de pequenos empreendedores.</p>
-            <div class="highlight-projects">
-              <h4>🚀 Principais Realizações:</h4>
-              <ul>
-                <li><strong>SmartBiz:</strong> Sistema completo de gestão MEI com emissão automática de NFe</li>
-                <li><strong>Alerta.Aí:</strong> Plataforma de monitoramento com automação WhatsApp</li>
-                <li><strong>PDX:</strong> Controle de vendas com relatórios gerenciais avançados</li>
-              </ul>
-            </div>
-            <div class="tech-expertise">
-              <h4>💻 Stack Tecnológica:</h4>
-              <div class="tech-grid">
-                <span class="tech-item">Python</span>
-                <span class="tech-item">Tkinter</span>
-                <span class="tech-item">SQLite</span>
-                <span class="tech-item">APIs REST</span>
-                <span class="tech-item">WhatsApp API</span>
-                <span class="tech-item">Automação</span>
-                <span class="tech-item">Análise de Dados</span>
-                <span class="tech-item">UX/UI Design</span>
-              </div>
-            </div>
-            <p><strong>Minha missão:</strong> Desenvolver soluções que simplifiquem processos complexos e gerem valor real para pequenos e médios negócios. Cada projeto é uma oportunidade de criar algo que faça diferença na rotina dos usuários.</p>
-            <div class="social">
-              <ul>
-                <li><a href="https://instagram.com/igorrodrigz" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://wa.me/5555999999999" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-                <li><a href="https://linkedin.com/in/igorrodrigues" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/igorrodrigz" target="_blank"><i class="fa fa-github"></i></a></li>
-              </ul>
-            </div>
+    </section>
+
+    <!-- OUTROS PROJETOS -->
+    <section id="outros">
+      <h2 class="section-title">Outros Projetos</h2>
+      <p class="section-subtitle">
+        Experimentos, estudos de caso e soluções complementares.
+      </p>
+
+      <div class="grid grid-compact">
+        <div class="card">
+          <h3>🗺️ GeoCode</h3>
+          <p>Enriquecimento de dados geográficos via APIs de geolocalização.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Dados</span>
+            <span class="tag">APIs</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/GeoCode" target="_blank">
+              <i class="fa-brands fa-github"></i> Repositório
+            </a>
           </div>
         </div>
-      </article>
-    </div>
-    <div class="col-md-5 col-md-offset-1">
-      <div class="section-title">
-        <h3>Vamos criar algo incrível juntos?</h3>
-        <p>Especialista em <strong>automação para MEI</strong>, <strong>sistemas de gestão</strong> e <strong>integração de APIs</strong>. Transformo ideias em soluções funcionais que geram resultados.</p>
-        <div class="contact-highlights">
-          <div class="highlight-item">
-            <i class="fa fa-rocket"></i>
-            <span>Desenvolvimento ágil e focado em resultados</span>
+
+        <div class="card">
+          <h3>🏪 Lorien – Multi-tenant Django</h3>
+          <p>Plataforma para gestão de oficinas com arquitetura multi-tenant.</p>
+          <div class="tags">
+            <span class="tag">Django</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SaaS</span>
           </div>
-          <div class="highlight-item">
-            <i class="fa fa-cogs"></i>
-            <span>Automação de processos complexos</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fa fa-chart-line"></i>
-            <span>Sistemas com análise de dados integrada</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fa fa-mobile"></i>
-            <span>Interfaces intuitivas e responsivas</span>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/lorien" target="_blank">
+              <i class="fa-brands fa-github"></i> Repositório
+            </a>
           </div>
         </div>
-        <div class="contact-methods">
-          <p><strong>📧 Email:</strong> <a href="mailto:rodrigues.igor.ir@gmail.com">rodrigues.igor.ir@gmail.com</a></p>
-          <p><strong>💬 WhatsApp:</strong> <a href="https://wa.me/5555999999999" target="_blank">Chamar no WhatsApp</a></p>
-          <p><strong>💼 LinkedIn:</strong> <a href="https://linkedin.com/in/igorrodrigues" target="_blank">Conectar no LinkedIn</a></p>
+
+        <div class="card">
+          <h3>⏱️ TimeStamp</h3>
+          <p>Sistema de controle de tempo e análise de produtividade.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Analytics</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/TimeStamp" target="_blank">
+              <i class="fa-brands fa-github"></i> Repositório
+            </a>
+          </div>
         </div>
-        <p>Ou preencha o formulário abaixo para um orçamento personalizado:</p>
+
+        <div class="card">
+          <h3>💼 SmartBiz</h3>
+          <p>Sistema desktop de gestão MEI com emissão de NFe automática.</p>
+          <div class="tags">
+            <span class="tag">Python/Tkinter</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">API NFe</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/SmartBiz" target="_blank">
+              <i class="fa-brands fa-github"></i> Repositório
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>📊 PDX – Vendas & Relatórios</h3>
+          <p>Controle de vendas com relatórios gerenciais avançados.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Database</span>
+            <span class="tag">Reports</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/PDX" target="_blank">
+              <i class="fa-brands fa-github"></i> Repositório
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🎮 Jogo da Cobra</h3>
+          <p>Implementação clássica do jogo Snake em Python/Pygame.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pygame</span>
+            <span class="tag">Game Dev</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/snake-game" target="_blank">
+              <i class="fa-brands fa-github"></i> Repositório
+            </a>
+          </div>
+        </div>
       </div>
-      <form name="sentMessage" id="contactForm" novalidate>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
+    </section>
+
+    <!-- SKILLS & EXPERTISE -->
+    <section id="skills">
+      <h2 class="section-title">Stack Técnico</h2>
+      <p class="section-subtitle">
+        Especialização em backend, dados e inteligência de negócios.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Backend & APIs</h4>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Automação</span>
           </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="email" id="email" name="email" class="form-control" placeholder="Seu email" required="required">
-              <p class="help-block text-danger"></p>
-            </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Dados & BI</h4>
+          <div class="skill-tags">
+            <span class="tag">SQL Avançado</span>
+            <span class="tag">Superset</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Análise Exploratória</span>
           </div>
         </div>
-        <div class="form-group">
-          <select name="project_type" class="form-control" required>
-            <option value="">Tipo de projeto</option>
-            <option value="sistema_gestao">Sistema de Gestão MEI</option>
-            <option value="automacao">Automação de Processos</option>
-            <option value="integracao_api">Integração de APIs</option>
-            <option value="analise_dados">Análise de Dados</option>
-            <option value="outro">Outro projeto</option>
-          </select>
+
+        <div class="skill-group">
+          <h4>Banco de Dados</h4>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Query Optimization</span>
+          </div>
         </div>
-        <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Descreva seu projeto ou necessidade..." required></textarea>
-          <p class="help-block text-danger"></p>
+
+        <div class="skill-group">
+          <h4>IA & Automação</h4>
+          <div class="skill-tags">
+            <span class="tag">Chatbots</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">MCP</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">Geoprocessamento</span>
+          </div>
         </div>
-        <div id="success"></div>
-        <button type="submit" class="btn btn-custom btn-lg">
-          <i class="fa fa-paper-plane"></i> Solicitar Orçamento
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-<footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <p>&copy; 2024 Igor Rodrigues. Todos os direitos reservados. | Desenvolvedor Python &amp; Especialista em Automação</p>
+
+        <div class="skill-group">
+          <h4>Ferramentas & DevOps</h4>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Docker</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>Metodologias</h4>
+          <div class="skill-tags">
+            <span class="tag">Arquitetura Limpa</span>
+            <span class="tag">SOLID</span>
+            <span class="tag">TDD</span>
+            <span class="tag">Code Review</span>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 text-right">
-        <a href="mailto:rodrigues.igor.ir@gmail.com" class="footer-link">
-          <i class="fa fa-envelope"></i> Contato
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
+      <p class="section-subtitle">
+        Estou disponível para projetos, consultorias e oportunidades de impacto em dados e backend.
+      </p>
+
+      <div class="contact-grid">
+        <a href="https://github.com/igorrodrigz" target="_blank" class="contact-card">
+          <i class="fa-brands fa-github"></i>
+          <h4>GitHub</h4>
+          <p>Veja meus projetos e contribuições</p>
         </a>
-        <a href="https://wa.me/5555999999999" class="footer-link" target="_blank">
-          <i class="fa fa-whatsapp"></i> WhatsApp
+
+        <a href="https://www.linkedin.com/in/igorrodriguesdevpy/" target="_blank" class="contact-card">
+          <i class="fa-brands fa-linkedin"></i>
+          <h4>LinkedIn</h4>
+          <p>Conecte-se comigo profissionalmente</p>
+        </a>
+
+        <a href="https://wa.me/5555999999999" target="_blank" class="contact-card">
+          <i class="fa-brands fa-whatsapp"></i>
+          <h4>WhatsApp</h4>
+          <p>Conversa rápida sobre projetos</p>
+        </a>
+
+        <a href="mailto:rodrigues.igor.ir@gmail.com" class="contact-card">
+          <i class="fa-solid fa-envelope"></i>
+          <h4>Email</h4>
+          <p>rodrigues.igor.ir@gmail.com</p>
         </a>
       </div>
-    </div>
+    </section>
+
+    <footer>
+      © 2025 Igor Rodrigues · Backend Python · Dados · BI
+    </footer>
+
   </div>
-</footer>
-<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
-<script type="text/javascript" src="js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="js/SmoothScroll.js"></script> 
-<script type="text/javascript" src="js/nivo-lightbox.js"></script> 
-<script type="text/javascript" src="js/jquery.isotope.js"></script> 
-<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
-<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>
