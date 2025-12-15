@@ -131,12 +131,14 @@
     .section-title {
       font-size: 32px;
       margin-bottom: 12px;
+      font-weight: 700;
     }
 
     .section-subtitle {
       color: var(--muted);
       max-width: 720px;
       margin-bottom: 48px;
+      font-size: 16px;
     }
 
     /* PROJECTS */
@@ -149,25 +151,56 @@
     .card {
       background: linear-gradient(180deg, #12182b, #0f1423);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px;
-      transition: transform 0.25s ease, border 0.25s ease;
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      border-color: var(--secondary);
+      border-color: var(--primary);
+      background: linear-gradient(180deg, #141b2c, #12182b);
+      transform: translateY(-2px);
     }
 
     .card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    
+
+    .award-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 8px;
+      padding: 4px 10px;
+      background: linear-gradient(135deg, rgba(207, 174, 91, 0.15), rgba(255, 215, 0, 0.1));
+      border: 1px solid rgba(207, 174, 91, 0.3);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #cfae5b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .award-badge i {
+      font-size: 12px;
     }
 
     .card p {
       color: var(--muted);
-      font-size: 15px;
-      margin-bottom: 16px;
+      font-size: 14px;
+      margin-bottom: 14px;
+      line-height: 1.5;
+      flex-grow: 1;
     }
 
     .card ul {
@@ -198,81 +231,50 @@
     }
 
     .tag {
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(122,162,255,0.12);
-      color: var(--secondary);
-      transition: all 0.25s ease;
-      cursor: pointer;
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: rgba(108, 242, 194, 0.08);
+      color: var(--primary);
+      border: 1px solid rgba(108, 242, 194, 0.15);
+      transition: all 0.2s ease;
+      font-weight: 500;
     }
 
     .tag:hover {
-      background: var(--secondary);
-      color: var(--bg);
+      background: rgba(108, 242, 194, 0.15);
+      border-color: rgba(108, 242, 194, 0.3);
     }
 
     /* CARD ENHANCEMENTS */
-    .card {
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      opacity: 0;
-      transition: opacity 0.25s ease;
-    }
-
-    .card:hover::before {
-      opacity: 1;
-    }
-
     .card-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--primary);
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      padding: 4px 8px;
-      background: rgba(108, 242, 194, 0.1);
-      border-radius: 4px;
-      width: fit-content;
-      letter-spacing: 0.5px;
+      display: none;
     }
 
     .card.featured {
-      border: 1px solid rgba(108, 242, 194, 0.25);
-      background: linear-gradient(135deg, rgba(108, 242, 194, 0.05) 0%, #12182b 100%);
+      border: 1px solid rgba(108, 242, 194, 0.2);
+      background: linear-gradient(180deg, #12182b, #0f1423);
     }
 
     .card-details {
       font-size: 13px;
       color: var(--muted);
-      margin-bottom: 16px;
-      padding: 12px;
-      background: rgba(108, 242, 194, 0.05);
-      border-radius: 8px;
+      margin-bottom: 14px;
+      padding: 0;
+      background: transparent;
+      border-radius: 0;
       line-height: 1.5;
     }
 
     .card-details strong {
       color: var(--primary);
+      font-weight: 600;
     }
 
     .card-links {
       display: flex;
-      gap: 8px;
-      margin-top: 16px;
+      gap: 10px;
+      margin-top: 14px;
       padding-top: 12px;
       border-top: 1px solid rgba(108, 242, 194, 0.1);
       flex-wrap: wrap;
@@ -282,21 +284,20 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 8px 12px;
-      background: rgba(108, 242, 194, 0.08);
+      padding: 8px 14px;
+      background: transparent;
       color: var(--primary);
       text-decoration: none;
       border-radius: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.25s ease;
-      border: 1px solid rgba(108, 242, 194, 0.15);
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(108, 242, 194, 0.2);
     }
 
     .card-links a:hover {
-      background: var(--primary);
-      color: var(--bg);
-      border-color: var(--primary);
+      background: rgba(108, 242, 194, 0.1);
+      border-color: rgba(108, 242, 194, 0.4);
     }
 
     /* GRID VARIANTS */
@@ -321,18 +322,18 @@
     .skill-group {
       background: linear-gradient(180deg, #12182b, #0f1423);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      transition: all 0.25s ease;
+      border-radius: 10px;
+      padding: 20px;
+      transition: all 0.2s ease;
     }
 
     .skill-group:hover {
-      border-color: var(--primary);
-      background: linear-gradient(180deg, #1a1f2e, #12182b);
+      border-color: rgba(108, 242, 194, 0.3);
+      background: linear-gradient(180deg, #141b2c, #12182b);
     }
 
     .skill-group h4 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--text);
       margin: 0 0 12px 0;
@@ -344,7 +345,7 @@
     .skill-group h4::before {
       content: '▸';
       color: var(--primary);
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1;
     }
 
@@ -366,57 +367,56 @@
     .contact-card {
       background: linear-gradient(180deg, #12182b, #0f1423);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px 24px;
+      border-radius: 12px;
+      padding: 28px 20px;
       text-align: center;
       text-decoration: none;
       color: inherit;
-      transition: all 0.25s ease;
+      transition: all 0.2s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .contact-card:hover {
-      border-color: var(--primary);
-      background: linear-gradient(180deg, #1a1f2e, #12182b);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(108, 242, 194, 0.1);
+      border-color: rgba(108, 242, 194, 0.3);
+      background: linear-gradient(180deg, #141b2c, #12182b);
+      transform: translateY(-2px);
     }
 
     .contact-card i {
-      font-size: 40px;
+      font-size: 32px;
       color: var(--primary);
-      transition: all 0.25s ease;
+      transition: all 0.2s ease;
     }
 
     .contact-card:hover i {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     .contact-card h4 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       color: var(--text);
       margin: 0;
     }
 
     .contact-card p {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--muted);
       margin: 0;
     }
 
     /* FOOTER */
     footer {
-      margin-top: 140px;
-      padding-top: 40px;
+      margin-top: 100px;
+      padding-top: 30px;
       border-top: 1px solid var(--border);
       text-align: center;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     @media (max-width: 900px) {
@@ -471,14 +471,114 @@
       <div class="profile-card">
         <ul>
           <li><i class="fa-solid fa-location-dot"></i> Uruguaiana / RS</li>
-          <li><i class="fa-solid fa-briefcase"></i> Backend Python • Dados • BI</li>
+          <li><i class="fa-solid fa-briefcase"></i> Dados • Backend Python • BI</li>
           <li><i class="fa-solid fa-database"></i> MySQL • Superset • SQL Avançado</li>
           <li><i class="fa-solid fa-brain"></i> IA Aplicada • Chatbots • MCP</li>
           <li><i class="fa-solid fa-plane"></i> Disponível para mudança</li>
         </ul>
       </div>
     </div>
+    
+    <!-- PROJECTS -->
+    <section id="projetos">
+      <h2 class="section-title">Projetos em Destaque</h2>
+      <p class="section-subtitle">
+        Soluções reais desenvolvidas com foco em dados, automação, arquitetura limpa e impacto social.
+      </p>
 
+      <div class="grid">
+        <div class="card featured">
+          <div class="card-badge">Principal</div>
+          <h3>
+            Alerta.Aí - Monitoramento Hídrico Avançado
+            <span class="award-badge">
+              <i class="fa-solid fa-trophy"></i> Premiado
+            </span>
+          </h3>
+          <p>
+            Sistema de resposta a desastres com projeção altimétrica, mapas de risco em tempo real e 
+            alertas automáticos via WhatsApp para defesa civil e orgãos públicos responsáveis.
+          </p>
+          <div class="card-details">
+            <strong>Stack:</strong> Python • Geoprocessamento • WhatsApp API • Análise de Dados
+          </div>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Geoprocessamento</span>
+            <span class="tag">Automação</span>
+            <span class="tag">WhatsApp</span>
+            <span class="tag">Script</span>
+            <span class="tag">API</span>
+            <span class="tag">Integração</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/Ferramentas-alerta" target="_blank">
+              <i class="fa-brands fa-github"></i> Código
+            </a>
+            <a href="https://alertaai.com.br" target="_blank">
+              <i class="fa-brands fa-chrome"></i> Projeto
+            </a>
+            <a href="https://www.estado.rs.gov.br/maratona-de-tecnologia-premia-solucoes-que-auxiliam-pessoas-atingidas" target="_blank">
+              <i class="fa-brands fa-brands"></i> RS.GOV.BR
+            </a>
+          </div>
+        </div>
+
+        <div class="card featured">
+          <div class="card-badge">Principal</div>
+          <h3>MCP - Guia Turístico Inteligente</h3>
+          <p>
+            Assistente digital inteligente com IA contextual para recomendações turísticas, 
+            desenvolvido em parceria com Secretaria de Turismo. Integração total com banco de dados local.
+          </p>
+          <div class="card-details">
+            <strong>Stack:</strong> Django • MySQL • Ollama (IA Local) • REST API
+          </div>
+          <div class="tags">
+            <span class="tag">Django</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">IA Local</span>
+            <span class="tag">Chatbot</span>
+            <span class="tag">MCP</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Django</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/igorrodrigz/MCP-GuiaTurista" target="_blank">
+              <i class="fa-brands fa-github"></i> Código
+            </a>
+            <a href="https://turismo.mrsolutions.dev.br/" target="_blank">
+              <i class="fa-brands fa-chrome"></i> Projeto
+            </a>
+          </div>
+        </div>
+
+        <div class="card featured">
+          <div class="card-badge">Principal</div>
+          <h3>Idoso Seguro - Educação Contra Fraudes</h3>
+          <p>
+            Chatbot preventivo para orientação de idosos contra golpes digitais, fraudes financeiras 
+            e práticas maliciosas. Impacto social direto em segurança digital inclusiva.
+          </p>
+          <div class="card-details">
+            <strong>Stack:</strong> WhatsApp API • IA Conversacional • UX Acessível
+          </div>
+          <div class="tags">
+            <span class="tag">WhatsApp</span>
+            <span class="tag">IA Conversacional</span>
+            <span class="tag">Segurança</span>
+            <span class="tag">Inclusão</span>
+          </div>
+          <div class="card-links">
+            <a href="https://www.linkedin.com/company/seguro-bot/?" target="_blank">
+              <i class="fa-brands fa-chrome"></i> Mais Info
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <!-- EXPERIENCE -->
     <section id="experiencia">
       <h2 class="section-title">Experiência Profissional</h2>
@@ -490,7 +590,7 @@
         <div class="card">
           <h3>MR Solutions <span style="color:var(--muted); font-weight:400">(2022 – Atual)</span></h3>
           <p>
-            Desenvolvedor Backend Python atuando na criação de soluções sob medida para empresas de diferentes segmentos,
+            Desenvolvedor autônomo Backend Python atuando na criação de soluções sob medida para empresas de diferentes segmentos,
             com foco em dados, automação de processos e integração de sistemas.
           </p>
           <ul style="margin-left:16px; color:var(--muted); font-size:15px;">
@@ -507,7 +607,7 @@
         </div>
 
         <div class="card">
-          <h3>Livon <span style="color:var(--muted); font-weight:400">(2025)</span></h3>
+          <h3>Livon <span style="color:var(--muted); font-weight:400">(07/2025 - 12/2025)</span></h3>
           <p>
             Analista de Dados e Programador atuando no suporte à equipe de BI e IA,
             com foco em consultas SQL, datasets e performance analítica.
@@ -522,107 +622,40 @@
             <span class="tag">Apache Superset</span>
             <span class="tag">BI</span>
             <span class="tag">DBeaver</span>
+            <span class="tag">Django</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Gitlab</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Metodologias Ágeis</span>
+            <span class="tag">Scrum</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>Fundição Reciclar <span style="color:var(--muted); font-weight:400">(2024 – 2025)</span></h3>
+          <h3>Fundição Reciclar <span style="color:var(--muted); font-weight:400">(09/2024 - 07/2025)</span></h3>
           <p>
             Programador e projetista CNC atuando em projetos industriais e artísticos de grande escala.
           </p>
           <ul style="margin-left:16px; color:var(--muted); font-size:15px;">
             <li>Vetorização e programação CNC (Código G).</li>
-            <li>Operação de máquinas CNC a laser e fresa.</li>
-            <li>Desenvolvimento de peças e fachadas de grande porte.</li>
+            <li>Operação de máquinas CNC a laser, fresa e co2.</li>
+            <li>Desenvolvimento de peças milimétricas e fachadas de grande porte.</li>
           </ul>
           <div class="tags" style="margin-top:16px;">
             <span class="tag">CNC</span>
             <span class="tag">CorelDRAW</span>
             <span class="tag">Engenharia de Produção</span>
+            <span class="tag">Projetos Industriais</span>
+            <span class="tag">Projetos Artísticos</span>
+            <span class="tag">March 3</span>
+            <span class="tag">AutoLaser</span>
+            <span class="tag">EzCAD</span>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- PROJECTS -->
-    <section id="projetos">
-      <h2 class="section-title">Projetos em Destaque</h2>
-      <p class="section-subtitle">
-        Soluções reais desenvolvidas com foco em dados, automação, arquitetura limpa e impacto social.
-      </p>
-
-      <div class="grid">
-        <div class="card featured">
-          <div class="card-badge">⭐ Principal</div>
-          <h3>🌊 Alerta.Aí – Monitoramento Hídrico</h3>
-          <p>
-            Sistema de resposta a desastres com projeção altimétrica, mapas de risco em tempo real e 
-            alertas automáticos via WhatsApp para defesa civil e população.
-          </p>
-          <div class="card-details">
-            <strong>Stack:</strong> Python • Geoprocessamento • WhatsApp API • Análise de Dados
-          </div>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Geoprocessamento</span>
-            <span class="tag">Automação</span>
-            <span class="tag">WhatsApp</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/igorrodrigz/Ferramentas-alerta" target="_blank">
-              <i class="fa-brands fa-github"></i> Código
-            </a>
-          </div>
-        </div>
-
-        <div class="card featured">
-          <div class="card-badge">⭐ Principal</div>
-          <h3>💬 MCP – Guia Turístico Inteligente</h3>
-          <p>
-            Assistente digital inteligente com IA contextual para recomendações turísticas, 
-            desenvolvido em parceria com Secretaria de Turismo. Integração total com banco de dados local.
-          </p>
-          <div class="card-details">
-            <strong>Stack:</strong> Django • MySQL • Ollama (IA Local) • REST API
-          </div>
-          <div class="tags">
-            <span class="tag">Django</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">IA Local</span>
-            <span class="tag">Chatbot</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/igorrodrigz/MCP-GuiaTurista" target="_blank">
-              <i class="fa-brands fa-github"></i> Código
-            </a>
-          </div>
-        </div>
-
-        <div class="card featured">
-          <div class="card-badge">⭐ Principal</div>
-          <h3>👴 Idoso Seguro – Educação Contra Fraudes</h3>
-          <p>
-            Chatbot preventivo para orientação de idosos contra golpes digitais, fraudes financeiras 
-            e práticas maliciosas. Impacto social direto em segurança digital inclusiva.
-          </p>
-          <div class="card-details">
-            <strong>Stack:</strong> WhatsApp API • IA Conversacional • UX Acessível
-          </div>
-          <div class="tags">
-            <span class="tag">WhatsApp</span>
-            <span class="tag">IA Conversacional</span>
-            <span class="tag">Segurança</span>
-            <span class="tag">Inclusão</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/igorrodrigz" target="_blank">
-              <i class="fa-brands fa-github"></i> Mais Info
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    
     <!-- OUTROS PROJETOS -->
     <section id="outros">
       <h2 class="section-title">Outros Projetos</h2>
